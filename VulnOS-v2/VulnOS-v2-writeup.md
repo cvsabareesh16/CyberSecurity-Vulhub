@@ -250,10 +250,9 @@ su firefart
 
 Enter generated password from exploit output.
  
- ---
-                   
-            OR
-                   
+         OR 
+# Second One with Dirtydow 2 (downloaded from the Linux Exploit Suggester)
+
 
 Type this in the target machine
 ```bash
