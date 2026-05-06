@@ -38,10 +38,10 @@ This repository contains my learning notes, VulnHub / CTF writeups, basic penetr
 
 | Lab Name | Platform | Status | Writeup |
 |---|---|---|---|
-| Metasploitable 2 | Local Lab | Completed | [View](Metasploitable-2-writup.md) |
-| DC-2 | VulnHub | Completed | [View](DC-2-writeup.md) |
-| Mr Robot 1 | VulnHub | Completed | [View](Mr-Robot-1-writeup.md) |
-| Basic Pentesting 1 | VulnHub | Completed | [View](Basic-Pentesting-1-writeup.md) |
+| Metasploitable 2 | Local Lab | Completed | [View](./Metasploitable-2/Metasploitable-2-writeup.md) |
+| DC-2 | VulnHub | Completed | [View](./DC-2/DC-2-writeup.md) |
+| Mr Robot 1 | VulnHub | Completed | [View](./Mr-Robot-1/Mr-Robot-1-writeup.md) |
+| Basic Pentesting 1 | VulnHub | Completed | [View](./Basic-Pentesting-1/Basic-Pentesting-1-writeup.md) |
 
 ---
 
