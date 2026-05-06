@@ -259,30 +259,24 @@ uid=0(root) gid=0(root).
 
 ---
 
-# Step 11 — Capture of the flag
+#Step 11 — Capture the Flag
 
 After gaining root access, enumerated the root directory contents.
 
 List files:
 
-```bash
 ls
-```
+
 Output:
 
-```bash
 flag.txt
-```
 
 Read the flag:
 
-```bash
 cat flag.txt
-```
 
 Output:
 
-```txt
 Congratulations! You have successfully rooted VulnOSv2.
 ```
 Root access successfully achieved.
