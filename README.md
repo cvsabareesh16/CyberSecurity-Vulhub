@@ -42,6 +42,7 @@ This repository contains my learning notes, VulnHub / CTF writeups, basic penetr
 | DC-2 | VulnHub | Completed | [View](./DC-2/DC-2-writeup.md) |
 | Mr Robot 1 | VulnHub | Completed | [View](./Mr-Robot-1/Mr-Robot-1-writeup.md) |
 | Basic Pentesting 1 | VulnHub | Completed | [View](./Basic-Pentesting-1/Basic-Pentesting-1-writeup.md) |
+| VulnOSv2 | Vulnhub | Completed | [View](./VulnOS-v2/VulnOS-v2-writeup.md) |
 
 ---
 
