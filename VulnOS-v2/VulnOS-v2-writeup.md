@@ -193,7 +193,7 @@ Older Ubuntu kernel vulnerable to Dirty COW discovered.
 Search exploit:
 
 ```bash
-searchsploit dirty cow
+searchsploit Ubuntu 14.04 3
 ```
 
 Copy exploit:
@@ -255,9 +255,11 @@ id
 Output:
 
 ```bash
-uid=0(root) gid=0(root)
+uid=0(root) gid=0(root).
 
-**Step 11 — Capture the Flag**
+---
+
+# Step 11 — Capture of the flag
 
 After gaining root access, enumerated the root directory contents.
 
