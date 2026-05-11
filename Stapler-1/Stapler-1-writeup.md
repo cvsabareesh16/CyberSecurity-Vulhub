@@ -327,4 +327,5 @@ Stapler 1 is an excellent VulnHub machine for practicing:
 - Multi-service analysis
 
 It teaches realistic penetration testing workflow and methodology.
+
 And this machine is solved by Sabareesh C V
