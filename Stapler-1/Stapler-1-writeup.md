@@ -5,7 +5,7 @@
 | Machine | Stapler 1 |
 |---|---|
 | Platform | VulnHub |
-| Difficulty | intermediate |
+| Difficulty | Medium-Hard |
 | OS | Linux |
 
 ---
