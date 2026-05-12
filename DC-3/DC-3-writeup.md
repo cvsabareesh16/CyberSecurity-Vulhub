@@ -25,13 +25,13 @@
 
 | Role | IP Address |
 |---|---|
-| Kali Linux | 192.168.28.125 |
+| Kali Linux | YOUR_KALI_IP |
 
 # Target Machine
 
 | Role | IP Address |
 |---|---|
-| DC-3 | 192.168.29.235 |
+| DC-3 | TARGET_IP |
 
 ---
 
