@@ -1,4 +1,3 @@
-````md
 # VulnOSv2 Writeup
 | Machine | VulnOSV2 |
 |---|---|
