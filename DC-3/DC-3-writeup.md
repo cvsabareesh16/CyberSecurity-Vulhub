@@ -5,7 +5,7 @@
 | Machine | DC-3 |
 |---|---|
 | Platform | VulnHub |
-| Difficulty | Easy / Intermediate |
+| Difficulty | Intermediate |
 | OS | Linux |
 
 ---
