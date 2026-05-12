@@ -1,4 +1,9 @@
 # Mr Robot 1 VulnHub Writeup
+| Machine | Mr-Robot-1 |
+|---|---|
+| Platform | VulnHub |
+| Difficulty | Intermediate |
+| OS | Linux |
 
 ## Lab Information
 
