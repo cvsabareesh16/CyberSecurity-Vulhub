@@ -1,4 +1,9 @@
 # 💣 Metasploitable 2 - Writeup
+| Machine | Metasploitable 2 |
+|---|---|
+| Platform | VulnHub |
+| Difficulty | Easy |
+| OS | Linux |
 
 ## 🎯 Objective
 
