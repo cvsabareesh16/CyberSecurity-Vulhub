@@ -44,6 +44,7 @@ This repository contains my learning notes, VulnHub / CTF writeups, basic penetr
 | Basic Pentesting 1 | VulnHub | Completed | [View](./Basic-Pentesting-1/Basic-Pentesting-1-writeup.md) |
 | VulnOSv2 | Vulnhub | Completed | [View](./VulnOS-v2/VulnOS-v2-writeup.md) |
 | Stapler 1 | Vulnhub | Completed | [View](./Stapler-1/Stapler-1-writeup.md) |
+| DC-3 | | Vulnhub | Completed | [view](./DC-3/DC-3-writeup.md) |
 
 ---
 
