@@ -1,12 +1,13 @@
 # DC-2 VulnHub Writeup
+| Machine | DC-2 |
+|---|---|
+| Platform | VulnHub |
+| Difficulty | Intermediate |
+| OS | Linux |
 
 ## Lab Information
 
-- Lab Name: DC-2
-- Platform: VulnHub
-- Difficulty: Beginner / Intermediate
-- Category: Linux, Web, Privilege Escalation
-- Status: Completed
+
 
 ---
 
