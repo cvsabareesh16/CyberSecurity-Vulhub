@@ -1,13 +1,14 @@
 ````md
 # VulnOSv2 Writeup
+| Machine | VulnOSV2 |
+|---|---|
+| Platform | VulnHub |
+| Difficulty | Intermediate |
+| OS | Linux |
+
 
 ## Machine Information
 
-| Machine | VulnOSv2 |
-|---|---|
-| Platform | VulnHub |
-| Difficulty | Easy |
-| OS | Linux |
 
 ---
 
